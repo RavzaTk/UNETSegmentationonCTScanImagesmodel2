@@ -1,0 +1,43 @@
+to train;
+add patient[] dataset files under "data/train" directory
+-also you can change the test dataset
+
+run data.py
+it will show "new_data" directory
+
+-you can run model.py to see details about model
+
+run train.py
+- you can change the hyperparameters on train.py
+
+after the training files,logs files are to be created.
+
+
+to validate;
+run eval.py
+after that "results" folder are to be created.
+
+to test;
+add .dcm dataset in directory data/test/
+run predict.py
+after that "test" folder are to be created.
+
+
+    model1 results
+201 train dataset
+50 validation dataset
+36 test dataset
+Epoch 5: val_loss improved from 0.09193 to 0.0364, saving model to files/model.h5
+101/101 [==============================] - 1157s 11s/step - loss: 0.0364 - dice_coef: 0.9636 - iou: 0.9320 - recall: 0.9927 - precision: 0.9762 - val_loss: 0.1592 - val_dice_coef: 0.8408 - val_iou: 0.7398 - val_recall: 0.8170 - val_precision: 0.9963 - lr: 1.0000e-04
+
+    model2 results
+1176 train dataset
+294 validation dataset
+36 test dataset
+Epoch 5: val_loss improved from 0.03493 to 0.03081, saving model to files/model.h5
+588/588 [==============================] - 6855s 12s/step - loss: 0.0331 - dice_coef: 0.9669 - iou: 0.9383 - recall: 0.9864 - precision: 0.9633 - val_loss: 0.0308 - val_dice_coef: 0.9692 - val_iou: 0.9432 - val_recall: 0.9824 - val_precision: 0.9677 - lr: 1.0000e-04
+- Epoch, batch size, learning rate (hyperparameters in 'train.py') can be changed in order to improve the model.
+
+
+
+
